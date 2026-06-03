@@ -1,70 +1,19 @@
-# Finest Monia
+# @babel/code-frame
 
-A modern romantic web application built with:
-- React + TypeScript (frontend)
-- Node.js + Express + TypeScript (backend)
-- PostgreSQL (data storage)
+> Generate errors that contain a code frame that point to source locations.
 
-## Features
+See our website [@babel/code-frame](https://babeljs.io/docs/babel-code-frame) for more information.
 
-- Elegant sidebar navigation (`Overview`, `Playlist`, `Gallery`, `Upload`)
-- Upload and play MP3/MP4 tracks
-- Upload and display photo/video memories
-- Delete tracks and gallery moments
-- Stylish romantic UI designed to feel intimate and premium
+## Install
 
-## Project structure
+Using npm:
 
-- `client` - React app
-- `server` - Express API and media upload handling
-
-## 1) Backend setup
-
-```bash
-cd server
-npm install
-cp .env.example .env
+```sh
+npm install --save-dev @babel/code-frame
 ```
 
-Update `.env` if needed:
+or using yarn:
 
-```env
-PORT=4000
-DATABASE_URL=postgresql://postgres:postgres@localhost:5432/finest_monia
+```sh
+yarn add @babel/code-frame --dev
 ```
-
-Create PostgreSQL DB:
-
-```sql
-CREATE DATABASE finest_monia;
-```
-
-Run backend:
-
-```bash
-npm run dev
-```
-
-## 2) Frontend setup
-
-```bash
-cd client
-npm install
-cp .env.example .env
-npm run dev
-```
-
-Open `http://localhost:5173`.
-
-## API endpoints
-
-- `GET /api/playlist`
-- `POST /api/playlist`
-- `DELETE /api/playlist/:id`
-- `GET /api/gallery`
-- `POST /api/gallery`
-- `DELETE /api/gallery/:id`
-
-Uploaded files are served from:
-
-- `GET /uploads/<filename>`
